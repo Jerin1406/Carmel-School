@@ -27,9 +27,9 @@ class CreateApplicationsTable extends Migration
             $table->string("mname");
             $table->string("admission");
             $table->string("mark1");
-            $table->string("mark2");
-            $table->string("mark3");
-            $table->date("interviewdate");
+            $table->string("mark2")->nullable();
+            $table->string("mark3")->nullable();
+            $table->date("interviewdate")->nullable();
 
             $table->timestamps();
         });

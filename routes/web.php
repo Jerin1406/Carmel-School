@@ -72,9 +72,9 @@ Route::post('/admin/check',[AdminController::class,'check'])->name('admin.check'
 
 Route::get('/admin/logout',[AdminController::class,'logout'])->name('admin.logout');
 
-
+Route::get('/admin/register',[AdminController::class,'register'])->name('admin.register');
 Route::group(['middleware'=>['AdminCheck']], function(){
-    Route::get('/admin/register',[AdminController::class,'register'])->name('admin.register');
+ //   Route::get('/admin/register',[AdminController::class,'register'])->name('admin.register');
     Route::get('/admin/dashboard',[AdminController::class,'dashboard'])->name('admin.dashboard');
     Route::get('/admin/login',[AdminController::class,'login'])->name('admin.login');
     Route::get('/admin/fview',[MainController::class ,'index'])->name('admin.fview');

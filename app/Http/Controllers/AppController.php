@@ -84,7 +84,10 @@ class AppController extends Controller
         'fname'=>'required',
         'mname'=>'required',
         'admission'=>'required',
-        'mark1'=>'required'
+        'mark1'=>'required',
+        'mark2'=>'nullable',
+        'mark3'=>'nullable',
+        'interviewdate'=>'nullable'
 
 
         ]);

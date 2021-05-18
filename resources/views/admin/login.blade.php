@@ -29,7 +29,7 @@
                 <br>
                 <button type="submit" class="btn btn-block btn-primary"> Sign In</button>
                 <br>
-                
+                <a href="/admin/register"> sign up </a>
                 
             </form>
         
