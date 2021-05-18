@@ -173,7 +173,7 @@ class AppController extends Controller
         );
 
         Mail::to($app['email'])->send(new SendMail($app));
-       session()->flash('message','Mail has been sent');
+      
         
         return redirect('/viewall');
     }
