@@ -38,6 +38,10 @@
               <td>View all applications</td>
               <td><a href="/admin/fview"><button class="btn btn-warning">View</button></a></td>
             </tr>
+            <tr>
+            <td><a href="/admin/register"> <button class="btn btn-danger">Add Admin</button>  </a></td>
+            <td></td>
+            </tr>
             </table>
                
                 

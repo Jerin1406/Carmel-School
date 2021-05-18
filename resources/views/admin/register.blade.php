@@ -1,5 +1,7 @@
 @extends("theme")
 @section("content")
+<br>
+<a href="/admin/dashboard"><button class="btn btn-warning"> Dashboard </button></a>
 <div class="container">
     <div class="row" style="margin-top:45px">
     <div class="col col-12 col-sm-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4">
@@ -37,7 +39,8 @@
                 <br>
                 <button type="submit" class="btn btn-block btn-primary"> Sign Up</button>
                 <br>
-                <a href="/admin/login">I already have an account, sign in </a>
+                <br>
+                
             </form>
         
         </div>
