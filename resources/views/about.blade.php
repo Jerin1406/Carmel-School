@@ -57,15 +57,9 @@
           <li class="drop-down"><a href="">More</a>
             <ul>
               <li><a href="/contact">Contact</a></li>
-              <li class="drop-down"><a href="#">Deep Drop Down</a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
+             
+              
+             
              
             </ul>
           </li>
