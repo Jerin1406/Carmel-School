@@ -4,12 +4,41 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Author;
+use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
     function login(){
         return view('admin.login');
     }
+    function register() {
+        return view('admin.register');
+    }
+    function save(Request $request) {
+        // return $request->input();
+        //validate requests
+        $request->validate([
+            
+            'email'=>'required|email|unique:admins',
+            
+            'password'=>'required|min:5|max:12'
+        ]);
+ 
+        //insert data into database
+        $admin=new Author;
+      
+        $admin->email=$request->email;
+        
+        $admin->password=Hash::make($request->password);
+        $save=$admin->save();
+ 
+        if($save){
+             return back()->with('success','New User has been successfuly added');
+        }else{
+            return back()->with('fail','Somthing went wrong,try again later');
+        }
+ 
+     }
 
     function check(Request $request){
         // return $request->input();
@@ -26,12 +55,12 @@ class AdminController extends Controller
        }
        else{
            //check password
-           if($request->password==$userInfo->password){
-                $request->session()->put('LoggedAdmin',$userInfo->id);
-                return redirect('admin/dashboard');
-           }else{
-            return back()->with('fail','Incorrect password');
-           }
+           if(Hash::check($request->password,$userInfo->password)){
+            $request->session()->put('LoggedAdmin',$userInfo->id);
+            return redirect('admin/dashboard');
+       }else{
+        return back()->with('fail','Incorrect password');
+       }
        }
     }
     function logout(){

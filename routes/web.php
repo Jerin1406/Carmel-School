@@ -74,6 +74,7 @@ Route::get('/admin/logout',[AdminController::class,'logout'])->name('admin.logou
 
 
 Route::group(['middleware'=>['AdminCheck']], function(){
+    Route::get('/admin/register',[AdminController::class,'register'])->name('admin.register');
     Route::get('/admin/dashboard',[AdminController::class,'dashboard'])->name('admin.dashboard');
     Route::get('/admin/login',[AdminController::class,'login'])->name('admin.login');
     Route::get('/admin/fview',[MainController::class ,'index'])->name('admin.fview');
@@ -86,3 +87,4 @@ Route::post('/view9editprocess/{id}',[AppController::class ,'update']);
 Route::get('/view9/{id}/edit',[AppController::class ,'edit9']); 
 
 
+Route::post('/admin/save',[AdminController::class,'save'])->name('admin.save');

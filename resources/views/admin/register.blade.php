@@ -7,30 +7,37 @@
     </div>
         <div class="col col-12 col-sm-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4">
         
-        <h4>Login  </h4><hr>
-            <form action="/admin/check" method="post">
-            @if(Session::get('fail'))
-            <div class="alert alert-danger">
-            {{Session::get('fail')}}
-            </div>
-            @endif
+        <h4>Register  </h4><hr>
+            <form action="/admin/save" method="post">
+                @if(Session::get('success'))
+                <div class="alert alert-success">
+                {{Session::get('success')}}
+                </div>
+                @endif
+                @if(Session::get('fail'))
+                <div class="alert alert-danger">
+                {{Session::get('fail')}}
+                </div>
+                @endif
+
+
             @csrf
-            
+                
                 <div class="form-group">
                 <label>Email</label>
                 <input type="text" class="form-control" name="email" placeholder="Enter email address" value="{{old('email')}}">
-                <span class="text-danger">@error('email'){{$message}} @enderror</span>
+                <span class="text-danger">@error('email'){{ $message }} @enderror</span>
                 </div>
+               
                 <div class="form-group">
                 <label>Password</label>
                 <input type="password" class="form-control" name="password" placeholder="Enter password">
-                <span class="text-danger">@error('password'){{$message}} @enderror</span>
+                <span class="text-danger">@error('password'){{ $message }} @enderror</span>
                 </div>
                 <br>
-                <button type="submit" class="btn btn-block btn-primary"> Sign In</button>
+                <button type="submit" class="btn btn-block btn-primary"> Sign Up</button>
                 <br>
-                <a href="/admin/register"> sign up </a>
-                
+                <a href="/admin/login">I already have an account, sign in </a>
             </form>
         
         </div>
