@@ -19,14 +19,14 @@ class AdminController extends Controller
            'email'=>'required|email',
            'password'=>'required|min:5|max:12'
        ]);
-       $userInfo =Author::where('email','=','admin123@gmail.com')->first();
+       $userInfo =Author::where('email','=',$request->email)->first();
 
        if(!$userInfo){
            return back()->with('fail','Invalid email id');
        }
        else{
            //check password
-           if($request->password=='admin123'){
+           if($request->password==$userInfo->password){
                 $request->session()->put('LoggedAdmin',$userInfo->id);
                 return redirect('admin/dashboard');
            }else{
