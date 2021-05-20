@@ -59,8 +59,8 @@
               <li><a href="/contact">Contact</a></li>
               <li class="dropdown"><a href="#"><span>Facilities</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">Library</a></li>
-                  <li><a href="#">Labs</a></li>
+                  <li><a href="/library">Library</a></li>
+                  <li><a href="/lab">Labs</a></li>
                   
                 </ul>
               </li>
