@@ -64,7 +64,7 @@
                   
                 </ul>
               </li>
-              <li><a href="#">Activities</a></li>
+             
               
             </ul>
           </li>
