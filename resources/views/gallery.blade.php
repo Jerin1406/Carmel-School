@@ -165,7 +165,7 @@ https://templatemo.com/tm-546-sixteen-clothing
             <div class="inner-content">
               <p>Copyright &copy; Carmel.
             
-            - Design: <a rel="nofollow noopener" href="" target="_blank">Carmel</a></p>
+            - Design: <a rel="nofollow noopener" href="" target="_blank">Jerin K Thomas</a></p>
             </div>
           </div>
         </div>
