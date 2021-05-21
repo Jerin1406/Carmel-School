@@ -92,18 +92,18 @@
                 </div>
                 <br>
                 <div class="form-group">
-                <label>Class 8 mark</label>
+                <label>Class 8 mark(in %)</label>
                 <input type="text" class="form-control" name="mark1" placeholder=" Enter class 8 mark" >
                 <span class="text-danger">@error('mark1'){{ $message }} @enderror</span>
                 </div>
 
                 <div class="form-group">
-                <label>Class 9 mark</label>
+                <label>Class 9 mark(in %)</label>
                 <input type="text" class="form-control" name="mark2" placeholder="Enter class 9 mark" >
                 </div>
 
                 <div class="form-group">
-                <label>Class 10 mark</label>
+                <label>Class 10 mark(in %)</label>
                 <input type="text" class="form-control" name="mark3" placeholder="Enter class 10 mark" >
                 </div>
 
