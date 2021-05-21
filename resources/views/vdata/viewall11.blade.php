@@ -35,8 +35,8 @@
 
               
                    
-                    <td>{{$app->mark3}}</td>
                     <td>{{$app->mark2}}</td>
+                    <td>{{$app->mark3}}</td>
                     <td>{{$app->interviewdate}}</td>
                     
 
