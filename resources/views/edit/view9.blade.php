@@ -87,7 +87,7 @@
                 </div>
 
                 <div class="form-group">
-                <label></label>
+                <label>Interview Date</label>
                 <input value="{{ $app->interviewdate}}" type="date" class="form-control" name="interviewdate" placeholder="Enter interview date" >
                 </div>
 
